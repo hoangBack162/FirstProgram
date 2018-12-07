@@ -122,7 +122,7 @@ public class loginForm extends javax.swing.JFrame {
             int flag = 1;
             Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/loginDB", "loginuser", "passuser");
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select * form USERTABLE");
+            ResultSet rs = st.executeQuery("select * from USERTABLE");
             while (rs.next())
             {
                 if (rs.getString(2).equals(jTextField1.getText())  && rs.getString(3).equals(jTextField2.getText()))
